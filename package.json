@@ -1,0 +1,36 @@
+{
+  "name": "ludicrum_webshop_v1",
+  "version": "1.0.0",
+  "description": "WordPress and WooCommerce theme for Ludicrum Webshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "lc_test",
+    "minify": "cleancss -o ludicrum_webshop/style.css ludicrum_webshop/style.css",
+    "build": "node-sass --include-path scss scss/style.scss ludicrum_webshop/style.css",
+    "watch": "nodemon -e scss -x \"npm run build\"",
+    "postbuild": "\"npm run minify\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ludifox/ludicrum_webshop_v1.git"
+  },
+  "keywords": [
+    "woocommerce",
+    "wordpress",
+    "ludicrum"
+  ],
+  "author": "Marius Akerbæk",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Ludifox/ludicrum_webshop_v1/issues"
+  },
+  "homepage": "https://github.com/Ludifox/ludicrum_webshop_v1#readme",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "clean-css": "^3.4.23"
+  },
+  "devDependencies": {
+    "node-sass": "^4.3.0",
+    "nodemon": "^1.11.0"
+  }
+}
