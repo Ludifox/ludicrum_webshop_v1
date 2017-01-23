@@ -2,21 +2,17 @@
 
 The WordPress and WooCommerce theme for the Ludicrum - Making T-shirts because it's fun webshop. Based on Bootstrap with sass, using npm with nodemon, node-sass and clean-css for easy builds.
 
-## Code Example
-
-Install using npm install. Build CSS after updates with `npm run build`, or simple run the command `npm run watch` to build and minify the style.css file on every save.
-
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Freedom! Running your own webshop and digital marketing campaigns require total control of the framework and ecommerce system. Making our own theme gives us just that!
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Install using `npm install`. Build CSS after updates with `npm run build`, or simple run the command `npm run watch` to build and minify the style.css file on every save.
 
-## API Reference
+## Theme control / API Reference
+This will eventually appear at www.ludicrumedia.no/projects/ludicrum-webshop-theme
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 ## Tests
 
@@ -28,4 +24,4 @@ Let people know how they can dive into the project, include important links to t
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+Licensed as GNU Public License 3.0. Feel free to fork, share and use!
