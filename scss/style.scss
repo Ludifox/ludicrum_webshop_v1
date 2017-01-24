@@ -1,5 +1,22 @@
+/*!
+Theme Name: Ludicrum Webshop v1
+Theme URI: https://ludicrumedia.no
+Author: Ludicrumedia AS
+Author URI: https://ludicrumedia.no
+Description: Custom WordPress/WooCommerce theme for Ludicrum Webshop
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: woocommerce, translation-ready, webshop, ludicrum
+Text Domain: ludicrum
+*/
+
 /* Fetch bootstrap */
 @import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+/* Fetch webshop templates */
+@import 'product-lists';
+@import 'product';
 
 /* Fetch custom css */
 @import 'custom-styles';
