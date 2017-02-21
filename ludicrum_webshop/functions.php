@@ -1,3 +1,4 @@
+<?php
 /*
  * Function file for ludicrum_webshop
  * Version: 1.0
@@ -6,10 +7,13 @@
 //Setup theme
 function ludicrum_webshop_setup() {
 	//Language files
-	load_theme_textdomain( 'ludicrum', get_stylesheet_directory_uri() . '/languages' );
+	load_theme_textdomain( 'ludicrum', get_template_directory_uri() . '/languages' );
 
 	//Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+	//Add support for title tag
+	add_theme_support( 'title-tag' );
 
 	//Add functionality for featured images
 	add_theme_support( 'post-thumbnails' );
@@ -30,18 +34,31 @@ add_action( 'after_setup_theme', 'ludicrum_webshop_setup' );
 
 //Add our custom functions javascript
 function ludicrum_scripts() {
-  	wp_enqueue_script( 'equalheight', get_stylesheet_directory_uri().'/js/equalheight.js', false );
-	wp_enqueue_script( 'cookies', get_stylesheet_directory_uri().'/js/cookies.js', false );
-	wp_enqueue_script( 'ludicrum-functions', get_stylesheet_directory_uri().'/js/ludicrum-functions.js', array('equalheight') );
+  	wp_enqueue_script( 'equalheight', get_template_directory_uri().'/js/equalheight.js', false );
+	wp_enqueue_script( 'cookies', get_template_directory_uri().'/js/cookies.js', false );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/js/node_modules/bootstrap-sass/assets/javascripts/bootstrap-min.js', false );
+	wp_enqueue_script( 'ludicrum-functions', get_template_directory_uri().'/js/ludicrum-functions.js', array('equalheight') );
+	wp_enqueue_style( 'ludicrum-functions', get_template_directory_uri().'/css/ludicrum_framework_min.css');
 }
 add_action( 'wp_enqueue_scripts', 'ludicrum_scripts' );
+
+//Prepare navigation areas
+function ludicrum_navigation_areas() {
+	register_nav_menus(
+		array(
+			'header-menu' => __('Header menu', 'Ludicrum'),
+			'my-page-menu' => __('My Page menu', 'Ludicrum')
+		)
+	);
+}
+add_action('init', 'ludicrum_navigation_areas');
 
 //Prepare widget areas
 function ludicrum_webshop_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'ludicrum' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Widgets placed here will appear in the right sidebar', 'ludicrum' ),
+		'name'          => __( 'Sidebar cart', 'ludicrum' ),
+		'id'            => 'sidebar-cart',
+		'description'   => __( 'Widgets placed here will appear in the bottom of the cart side', 'ludicrum' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -49,9 +66,9 @@ function ludicrum_webshop_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer: outer left', 'ludicrum' ),
-		'id'            => 'footer-ol',
-		'description'   => __( 'Place widgets in the outer left light footer.', 'ludicrum' ),
+		'name'          => __( 'Sidebar - profile', 'ludicrum' ),
+		'id'            => 'sidebar-profile',
+		'description'   => __( 'Widgets placed here will appear in the bottom of the profile tab', 'ludicrum' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -59,33 +76,15 @@ function ludicrum_webshop_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Footer: inner left', 'ludicrum' ),
-		'id'            => 'footer-il',
-		'description'   => __( 'Place widgets in the inner left light footer.', 'ludicrum' ),
+		'name'          => __( 'Sidebar - login', 'ludicrum' ),
+		'id'            => 'sidebar-login',
+		'description'   => __( 'Widgets placed here will appear in the bottom of the login tab', 'ludicrum' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer: inner right', 'ludicrum' ),
-		'id'            => 'footer-ir',
-		'description'   => __( 'Place widgets in the inner right light footer.', 'ludicrum' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Footer: outer right', 'ludicrum' ),
-		'id'            => 'footer-ir',
-		'description'   => __( 'Place widgets in the outer right light footer.', 'ludicrum' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 }
 add_action( 'widgets_init', 'ludicrum_webshop_widgets_init' );
 
@@ -96,3 +95,4 @@ function ludicrum_webshop_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ludicrum_webshop_pingback_header' );
+?>

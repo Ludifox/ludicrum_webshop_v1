@@ -8,7 +8,7 @@ Freedom! Running your own webshop and digital marketing campaigns require total 
 
 ## Installation
 
-Install using `npm install`. Build CSS after updates with `npm run build`, or simple run the command `npm run watch` to build and minify the style.css file on every save.
+Install using `npm install`. Build CSS after updates with `npm run build`, or simply run the command `npm run watch` to build and minify the style.css file on every save.
 
 ## Theme control / API Reference
 This will eventually appear at www.ludicrumedia.no/projects/ludicrum-webshop-theme
@@ -20,7 +20,7 @@ Describe and show how to run the tests with code examples.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Egil Myklestad, Marius Akerbæk
 
 ## License
 

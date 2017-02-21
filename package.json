@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "lc_test",
-    "minify": "cleancss -o ludicrum_webshop/style.css ludicrum_webshop/style.css",
-    "build": "node-sass --include-path scss scss/style.scss ludicrum_webshop/style.css",
+	"copybsjs": "copyfiles node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js bootstrap.min.js ludicrum_webshop/js",
+    "minify": "cleancss -o ludicrum_webshop/css/ludicrum_framework_min.css ludicrum_webshop/css/ludicrum_framework.css",
+    "build": "node-sass --include-path scss scss/ludicrum_framework.scss ludicrum_webshop/css/ludicrum_framework.css",
     "watch": "nodemon -e scss -x \"npm run build\"",
-    "postbuild": "\"npm run minify\""
+    "postbuild": "\"npm run minify\"",
+	"prebuild": "\"npm run copybsjs\""
   },
   "repository": {
     "type": "git",

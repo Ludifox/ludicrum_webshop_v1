@@ -1,0 +1,13 @@
+/* Fetch bootstrap */
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+/* Fetch website templates */
+@import 'page_templates/frontpage';
+@import 'page_templates/blog';
+
+/* Fetch webshop templates */
+@import 'webshop/product-lists';
+@import 'webshop/product';
+
+/* Fetch custom css */
+@import 'custom-styles';
