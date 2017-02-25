@@ -39,7 +39,7 @@ function ludicrum_scripts() {
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/js/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', false );
 	wp_enqueue_script( 'fancypanes', get_template_directory_uri().'/js/fancypanes.js', false );
 	wp_enqueue_script( 'ludicrum-functions', get_template_directory_uri().'/js/ludicrum-functions.js', array('equalheight') );
-	wp_enqueue_style( 'ludicrum-functions', get_template_directory_uri().'/css/ludicrum_framework_min.css');
+	wp_enqueue_style( 'ludicrum-functions', get_template_directory_uri().'/css/ludicrum_framework_min.css', false, "1.0.0");
 }
 add_action( 'wp_enqueue_scripts', 'ludicrum_scripts' );
 

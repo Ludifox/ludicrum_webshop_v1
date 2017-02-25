@@ -30,24 +30,33 @@
 	<body <?php body_class(); ?>>
 		<div id="everything-ludicrum" class="container-fluid">
 			<div class="row">
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-lg-push-10 col-md-push-9 col-md-push-8" id="sidetrack">
-					<ul class="resp-tabs-list tab-menu-sidetrack">
-			            <li><?php echo __("Cart", "ludicrum"); ?></li>
-			            <li><?php echo __("My profile", "ludicrum"); ?></li>
-			        </ul> 
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 col-lg-push-9 col-md-push-9 col-md-push-8" id="sidetrack">
+					<div id="sidetrack-menu-tab">
+						<ul class="resp-tabs-list tab-menu-sidetrack">
+				            <li><?php echo __("Cart", "ludicrum"); ?></li>
+				            <li><?php echo __("My profile", "ludicrum"); ?></li>
+				        </ul> 
 
-			        <div class="resp-tabs-container tab-menu-sidetrack">                                                        
-			            <div>
-			            	<p>Products and stuff...</p>
-			            </div>
-			            <div>
-							<ul id="my-profile-menu" class="sidetrack-menu">
-								<li><a href="#orders"><?php echo __("Order history","ludicrum"); ?></a></li>
-							</ul>
-			            </div>
+				        <div class="resp-tabs-container tab-menu-sidetrack">                                                        
+				            <div>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            	<p>Products and stuff...</p>
+				            </div>
+				            <div>
+								<ul id="my-profile-menu" class="sidetrack-menu">
+									<li><a href="#orders"><?php echo __("Order history","ludicrum"); ?></a></li>
+								</ul>
+				            </div>
+				        </div>
 			        </div>
 				</div>
-				<div class="col-lg-10 col-md-9 col-sm-8-col-xs-12 col-lg-pull-2 col-md-pull-3 col-sm-pull-4" id="main">
+				<div class="col-lg-9 col-md-9 col-sm-8-col-xs-12 col-lg-pull-3 col-md-pull-3 col-sm-pull-4 col-xs-12" id="main">
 					<header id="brandarea" class="row">
 						<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs" id="logo">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/ludicrum_logo_optimised.svg" alt="<?php echo get_bloginfo( 'name' ); ?>" />
