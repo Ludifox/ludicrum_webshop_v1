@@ -15,9 +15,7 @@ jQuery(document).ready(function (jQuery) {
 	});
 
 	jQuery("#sidetrack").easyResponsiveTabs({
-        type: 'default', //Types: default, vertical, accordion           
-        width: 'auto', //auto or any custom width
-        fit: true
+      tabidentify: 'tab-menu-sidetrack'
     });
 
 

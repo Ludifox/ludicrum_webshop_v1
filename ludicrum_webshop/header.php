@@ -31,12 +31,12 @@
 		<div id="everything-ludicrum" class="container-fluid">
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-lg-push-10 col-md-push-9 col-md-push-8" id="sidetrack">
-					<ul class="resp-tabs-list">
+					<ul class="resp-tabs-list tab-menu-sidetrack">
 			            <li><?php echo __("Cart", "ludicrum"); ?></li>
 			            <li><?php echo __("My profile", "ludicrum"); ?></li>
 			        </ul> 
 
-			        <div class="resp-tabs-container">                                                        
+			        <div class="resp-tabs-container tab-menu-sidetrack">                                                        
 			            <div>
 			            	<p>Products and stuff...</p>
 			            </div>
