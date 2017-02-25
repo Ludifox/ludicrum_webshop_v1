@@ -31,22 +31,21 @@
 		<div id="everything-ludicrum" class="container-fluid">
 			<div class="row">
 				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-lg-push-10 col-md-push-9 col-md-push-8" id="sidetrack">
-					<ul class="nav nav-tabs" role="tablist">
-					    <li role="presentation" class="active"><a href="#cart" aria-controls="cart" role="tab" data-toggle="tab">Cart</a></li>
-					    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-					  </ul>
+					<ul class="resp-tabs-list">
+			            <li><?php echo __("Cart", "ludicrum"); ?></li>
+			            <li><?php echo __("My profile", "ludicrum"); ?></li>
+			        </ul> 
 
-					  <!-- Tab panes -->
-					  <div class="tab-content">
-					    <div role="tabpanel" class="tab-pane active" id="cart">
-					    	<p>Products and such...
-					    </div>
-					    <div role="tabpanel" class="tab-pane" id="profile">
-							<p>Your profile</p>
-					    </div>
-					  </div>
-
-					</div>
+			        <div class="resp-tabs-container">                                                        
+			            <div>
+			            	<p>Products and stuff...</p>
+			            </div>
+			            <div>
+							<ul id="my-profile-menu" class="sidetrack-menu">
+								<li><a href="#orders"><?php echo __("Order history","ludicrum"); ?></a></li>
+							</ul>
+			            </div>
+			        </div>
 				</div>
 				<div class="col-lg-10 col-md-9 col-sm-8-col-xs-12 col-lg-pull-2 col-md-pull-3 col-sm-pull-4" id="main">
 					<header id="brandarea" class="row">

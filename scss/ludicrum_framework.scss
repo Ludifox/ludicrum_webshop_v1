@@ -1,6 +1,9 @@
 /* Fetch bootstrap */
 @import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
+/* Fetch modules */
+@import 'modules/fancypanes';
+
 /* Fetch website templates */
 @import 'page_templates/frontpage';
 @import 'page_templates/blog';

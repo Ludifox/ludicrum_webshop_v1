@@ -13,4 +13,12 @@ jQuery(document).ready(function (jQuery) {
 	}).mouseout(function() {
 		jQuery("#text-enlargen-info").hide();
 	});
+
+	jQuery("#sidetrack").easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion           
+        width: 'auto', //auto or any custom width
+        fit: true
+    });
+
+
 });

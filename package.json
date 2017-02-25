@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "lc_test",
-	"copybsjs": "copyfiles node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js bootstrap.min.js ludicrum_webshop/js",
+    "copybsjs": "copyfiles node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js bootstrap.min.js ludicrum_webshop/js",
     "minify": "cleancss -o ludicrum_webshop/css/ludicrum_framework_min.css ludicrum_webshop/css/ludicrum_framework.css",
     "build": "node-sass --include-path scss scss/ludicrum_framework.scss ludicrum_webshop/css/ludicrum_framework.css",
     "watch": "nodemon -e scss -x \"npm run build\"",
     "postbuild": "\"npm run minify\"",
-	"prebuild": "\"npm run copybsjs\""
+    "prebuild": "\"npm run copybsjs\""
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "clean-css": "^3.4.23"
   },
   "devDependencies": {
+    "copyfiles": "^1.2.0",
     "node-sass": "^4.3.0",
     "nodemon": "^1.11.0"
   }
